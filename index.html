@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Página pública por decisão do Defensor; ainda assim, fora dos buscadores. -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Painel do Gabinete</title>
+<style>
+  :root {
+    --fundo: #f5f6f8;
+    --cartao: #ffffff;
+    --borda: #dfe3e8;
+    --texto: #1c2430;
+    --suave: #5b6675;
+    --tenue: #8a94a3;
+    --realce: #eef1f5;
+    --vermelho: #b42318;   --vermelho-bg: #fdecea;
+    --laranja: #b54708;    --laranja-bg: #fff4e5;
+    --amarelo: #8a6100;    --amarelo-bg: #fff8db;
+    --roxo: #6b3fa0;       --roxo-bg: #f3edfb;
+    --azul: #175cd3;       --azul-bg: #eaf2fe;
+    --verde: #067647;      --verde-bg: #e7f6ee;
+    --indigo: #3e4cc9;     --indigo-bg: #eceefd;
+    --cinza: #4a5462;      --cinza-bg: #eef0f3;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fundo: #111418; --cartao: #1a1f26; --borda: #2c333d; --texto: #e6e9ee;
+      --suave: #a3adba; --tenue: #7c8694; --realce: #222933;
+      --vermelho: #ff8a80; --vermelho-bg: #3a1d1b;
+      --laranja: #ffb168;  --laranja-bg: #3a2814;
+      --amarelo: #f5cf5b;  --amarelo-bg: #352c10;
+      --roxo: #c9a7f5;     --roxo-bg: #2c2140;
+      --azul: #8cb8ff;     --azul-bg: #1a2a45;
+      --verde: #6fd4a0;    --verde-bg: #15301f;
+      --indigo: #a9b1ff;   --indigo-bg: #22264a;
+      --cinza: #b3bcc8;    --cinza-bg: #262c35;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fundo: #111418; --cartao: #1a1f26; --borda: #2c333d; --texto: #e6e9ee;
+    --suave: #a3adba; --tenue: #7c8694; --realce: #222933;
+    --vermelho: #ff8a80; --vermelho-bg: #3a1d1b;
+    --laranja: #ffb168;  --laranja-bg: #3a2814;
+    --amarelo: #f5cf5b;  --amarelo-bg: #352c10;
+    --roxo: #c9a7f5;     --roxo-bg: #2c2140;
+    --azul: #8cb8ff;     --azul-bg: #1a2a45;
+    --verde: #6fd4a0;    --verde-bg: #15301f;
+    --indigo: #a9b1ff;   --indigo-bg: #22264a;
+    --cinza: #b3bcc8;    --cinza-bg: #262c35;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fundo); color: var(--texto);
+    font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 1120px; margin: 0 auto; padding: 20px 16px 48px; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin-bottom: 16px; }
+  h1 { font-size: 22px; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: 16px; margin: 0 0 10px; }
+  .sub { color: var(--suave); font-size: 13px; }
+  .aviso { display: none; margin: 0 0 14px; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--borda);
+           background: var(--amarelo-bg); color: var(--amarelo); font-size: 14px; }
+  .aviso.visivel { display: block; }
+
+  .cartoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 18px; }
+  .cartao { background: var(--cartao); border: 1px solid var(--borda); border-left-width: 4px; border-radius: 10px; padding: 12px 14px; }
+  .cartao .rot { font-size: 12px; font-weight: 600; color: var(--suave); text-transform: uppercase; letter-spacing: .03em; }
+  .cartao .num { font-size: 30px; font-weight: 700; line-height: 1.15; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .cartao .det { font-size: 12.5px; color: var(--suave); margin-top: 2px; }
+  .c-cinza  { border-left-color: var(--cinza); }
+  .c-roxo   { border-left-color: var(--roxo); }   .c-roxo .num { color: var(--roxo); }
+  .c-verde  { border-left-color: var(--verde); }  .c-verde .num { color: var(--verde); }
+  .c-azul   { border-left-color: var(--azul); }   .c-azul .num { color: var(--azul); }
+
+  section { background: var(--cartao); border: 1px solid var(--borda); border-radius: 10px; padding: 14px; margin-bottom: 16px; }
+  .rolagem { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; color: var(--suave);
+       border-bottom: 2px solid var(--borda); padding: 7px 8px; white-space: nowrap; }
+  td { border-bottom: 1px solid var(--borda); padding: 7px 8px; vertical-align: middle; }
+  tr:last-child td { border-bottom: 0; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  th.n { text-align: right; }
+  .proc { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 13.5px; white-space: nowrap; }
+  tr.subtotal td { font-weight: 700; background: var(--realce); }
+  tr.grupo td { font-size: 12px; font-weight: 700; color: var(--suave); text-transform: uppercase; letter-spacing: .03em; padding-top: 12px; }
+  .zero { color: var(--tenue); }
+
+  .etq { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 12.5px;
+         font-weight: 600; white-space: nowrap; border: 1px solid transparent; }
+  .e-roxo { color: var(--roxo); background: var(--roxo-bg); }
+  .e-verde { color: var(--verde); background: var(--verde-bg); }
+  .e-azul { color: var(--azul); background: var(--azul-bg); }
+  .e-cinza { color: var(--cinza); background: var(--cinza-bg); }
+  .e-indigo { color: var(--indigo); background: var(--indigo-bg); }
+  .u-vencido { color: var(--vermelho); background: var(--vermelho-bg); }
+  .u-hoje { color: var(--laranja); background: var(--laranja-bg); }
+  .u-urgente { color: var(--amarelo); background: var(--amarelo-bg); }
+  .u-atencao { color: var(--azul); background: var(--azul-bg); }
+  .u-tranquilo { color: var(--verde); background: var(--verde-bg); }
+  .pessoa { font-weight: 600; }
+  .ninguem { color: var(--tenue); font-style: italic; }
+  .mini { font-size: 12px; color: var(--suave); }
+
+  .filtros { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 10px; }
+  .filtros label { font-size: 13px; color: var(--suave); display: inline-flex; align-items: center; gap: 6px; }
+  select { font: inherit; font-size: 14px; color: var(--texto); background: var(--cartao); border: 1px solid var(--borda);
+           border-radius: 6px; padding: 5px 8px; max-width: 100%; }
+  .contagem { font-size: 13px; color: var(--suave); margin-left: auto; }
+  .vazio { color: var(--suave); padding: 10px 2px; }
+  footer { color: var(--tenue); font-size: 12px; text-align: center; }
+  @media (max-width: 560px) {
+    h1 { font-size: 19px; }
+    .cartao .num { font-size: 26px; }
+    .contagem { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Painel do Gabinete</h1>
+    <div class="sub" id="situacao">Carregando…</div>
+  </header>
+  <div class="aviso" id="aviso" role="status"></div>
+
+  <div class="cartoes" id="cartoes"></div>
+
+  <section>
+    <h2>Com quem estão os processos</h2>
+    <div class="rolagem"><table id="tab-pessoas"></table></div>
+  </section>
+
+  <section>
+    <h2>Processos na caixa</h2>
+    <div class="filtros">
+      <label>Com quem <select id="f-pessoa"></select></label>
+      <label>Situação <select id="f-situacao"></select></label>
+      <span class="contagem" id="contagem-proc"></span>
+    </div>
+    <div class="rolagem"><table id="tab-processos"></table></div>
+  </section>
+
+  <section>
+    <h2 id="titulo-movidos">Saíram da caixa</h2>
+    <div class="rolagem"><table id="tab-movidos"></table></div>
+  </section>
+
+  <footer>Atualiza sozinho: o gabinete publica a cada mudança, e esta página confere a cada minuto.
+    Só números de processo e a distribuição interna — sem nome de assistido, sem teor dos atos.</footer>
+</main>
+<script>
+"use strict";
+// Tudo o que vem dos dados entra por textContent — nunca como HTML.
+var SITUACOES = {
+  sem_analise:          { rot: "Sem análise",            sim: "○", cls: "e-cinza" },
+  para_minuta:          { rot: "Para minuta",            sim: "✎", cls: "e-roxo" },
+  no_solar:             { rot: "No Solar, falta assinar", sim: "✍", cls: "e-verde" },
+  depende_do_assistido: { rot: "Depende do assistido",   sim: "☎", cls: "e-azul" },
+  especialista:         { rot: "Especialista",           sim: "⚖", cls: "e-indigo" }
+};
+var ORDEM_SIT = ["para_minuta", "sem_analise", "no_solar", "depende_do_assistido", "especialista"];
+var SEM = "__sem__";
+var dados = null;
+
+function el(tag, attrs, filhos) {
+  var e = document.createElement(tag);
+  if (attrs) for (var k in attrs) {
+    if (k === "text") e.textContent = attrs[k];
+    else if (k === "cls") e.className = attrs[k];
+    else e.setAttribute(k, attrs[k]);
+  }
+  (filhos || []).forEach(function (f) { if (f) e.appendChild(typeof f === "string" ? document.createTextNode(f) : f); });
+  return e;
+}
+function limpar(n) { while (n.firstChild) n.removeChild(n.firstChild); return n; }
+function p2(n) { return (n < 10 ? "0" : "") + n; }
+function dataBR(iso) { var p = String(iso || "").slice(0, 10).split("-"); return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : "—"; }
+function hojeISO() { var d = new Date(); return d.getFullYear() + "-" + p2(d.getMonth() + 1) + "-" + p2(d.getDate()); }
+function diasAte(iso) {
+  var a = String(iso).split("-").map(Number), h = hojeISO().split("-").map(Number);
+  return Math.round((new Date(a[0], a[1] - 1, a[2]) - new Date(h[0], h[1] - 1, h[2])) / 86400000);
+}
+function urgencia(iso) {
+  var d = diasAte(iso);
+  if (d < 0) return { cls: "u-vencido", sim: "⛔", rot: d === -1 ? "venceu ontem" : "venceu há " + (-d) + " dias" };
+  if (d === 0) return { cls: "u-hoje", sim: "🔥", rot: "vence hoje" };
+  if (d <= 3) return { cls: "u-urgente", sim: "⚠", rot: d === 1 ? "amanhã" : "em " + d + " dias" };
+  if (d <= 7) return { cls: "u-atencao", sim: "•", rot: "em " + d + " dias" };
+  return { cls: "u-tranquilo", sim: "✓", rot: "em " + d + " dias" };
+}
+function etiqueta(cls, sim, rot) { return el("span", { cls: "etq " + cls }, [el("span", { "aria-hidden": "true", text: sim }), rot]); }
+function numCel(v) { return el("td", { cls: "n" + (v ? "" : " zero"), text: String(v) }); }
+
+function cartao(cor, rot, num, det) {
+  return el("div", { cls: "cartao " + cor }, [
+    el("div", { cls: "rot", text: rot }),
+    el("div", { cls: "num", text: String(num) }),
+    det ? el("div", { cls: "det", text: det }) : null
+  ]);
+}
+
+function desenharCartoes(r, janela) {
+  var c = limpar(document.getElementById("cartoes"));
+  c.appendChild(cartao("c-cinza", "Na caixa principal", r.naCaixa,
+    r.semAnalise ? r.semAnalise + " ainda sem análise" : "todos analisados"));
+  c.appendChild(cartao("c-roxo", "Analisados, seguem na caixa", r.analisadosNaCaixa,
+    r.naCaixa ? Math.round(100 * r.analisadosNaCaixa / r.naCaixa) + "% da caixa" : ""));
+  c.appendChild(cartao("c-roxo", "Para minuta", r.paraMinuta, "peça a fazer, ainda fora do Solar"));
+  c.appendChild(cartao("c-verde", "No Solar", r.noSolar, "peça pronta, falta assinar"));
+  c.appendChild(cartao("c-azul", "Com a assessoria", r.comAssessoria,
+    r.dependeDoAssistido ? r.dependeDoAssistido + " na caixa dependem do assistido" : "tarefas encaminhadas"));
+  c.appendChild(cartao("c-cinza", "Saíram da caixa", r.movidos, "nos últimos " + janela + " dias"));
+}
+
+function desenharPessoas(d) {
+  var t = limpar(document.getElementById("tab-pessoas"));
+  t.appendChild(el("thead", null, [el("tr", null, [
+    el("th", { text: "Pessoa" }), el("th", { cls: "n", text: "Processos" }), el("th", { cls: "n", text: "Sem análise" }),
+    el("th", { cls: "n", text: "Para minuta" }), el("th", { cls: "n", text: "No Solar" })
+  ])]));
+  var corpo = el("tbody");
+  function linha(p, rotuloExtra) {
+    corpo.appendChild(el("tr", null, [
+      el("td", null, [el("span", { cls: "pessoa", text: p.nome }), rotuloExtra ? el("span", { cls: "mini", text: " " + rotuloExtra }) : null]),
+      numCel(p.total), numCel(p.semAnalise), numCel(p.paraMinuta), numCel(p.noSolar)
+    ]));
+  }
+  var outros = d.pessoas.filter(function (p) { return !p.estagiario; });
+  var estag = d.pessoas.filter(function (p) { return p.estagiario; });
+  outros.forEach(function (p) { linha(p, p.foraDaEquipe ? "(fora da equipe)" : ""); });
+  if (estag.length) {
+    corpo.appendChild(el("tr", { cls: "grupo" }, [el("td", { colspan: "5", text: "Estagiários" })]));
+    var soma = { total: 0, semAnalise: 0, paraMinuta: 0, noSolar: 0 };
+    estag.forEach(function (p) {
+      linha(p, "");
+      soma.total += p.total; soma.semAnalise += p.semAnalise; soma.paraMinuta += p.paraMinuta; soma.noSolar += p.noSolar;
+    });
+    corpo.appendChild(el("tr", { cls: "subtotal" }, [
+      el("td", { text: "Todos os estagiários" }), numCel(soma.total), numCel(soma.semAnalise), numCel(soma.paraMinuta), numCel(soma.noSolar)
+    ]));
+  }
+  var sem = d.processos.filter(function (p) { return !p.comQuem; });
+  var contar = function (s) { return sem.filter(function (p) { return p.situacao === s; }).length; };
+  corpo.appendChild(el("tr", null, [
+    el("td", null, [el("span", { cls: "ninguem", text: "Sem ninguém marcado" })]),
+    numCel(sem.length), numCel(contar("sem_analise")), numCel(contar("para_minuta")), numCel(contar("no_solar"))
+  ]));
+  t.appendChild(corpo);
+}
+
+function opcoes(select, lista, atual) {
+  limpar(select);
+  lista.forEach(function (o) { select.appendChild(el("option", { value: o[0], text: o[1] })); });
+  if (lista.some(function (o) { return o[0] === atual; })) select.value = atual;
+}
+
+function desenharFiltros(d) {
+  var fp = document.getElementById("f-pessoa"), fs = document.getElementById("f-situacao");
+  var atualP = fp.value || "", atualS = fs.value || "";
+  var pessoas = [["", "Todos"]];
+  d.pessoas.forEach(function (p) { pessoas.push([p.nome, p.nome + " (" + p.total + ")"]); });
+  pessoas.push([SEM, "Sem ninguém"]);
+  opcoes(fp, pessoas, atualP);
+  var sits = [["", "Todas"]];
+  ORDEM_SIT.forEach(function (s) { sits.push([s, SITUACOES[s].rot]); });
+  sits.push(["assessoria", "Com a assessoria"]);
+  opcoes(fs, sits, atualS);
+}
+
+function desenharProcessos(d) {
+  var fp = document.getElementById("f-pessoa").value, fs = document.getElementById("f-situacao").value;
+  var lista = d.processos.filter(function (p) {
+    if (fp === SEM && p.comQuem) return false;
+    if (fp && fp !== SEM && p.comQuem !== fp) return false;
+    if (fs === "assessoria") return p.onde === "assessoria";
+    if (fs && p.situacao !== fs) return false;
+    return true;
+  });
+  document.getElementById("contagem-proc").textContent = lista.length + (lista.length === 1 ? " processo" : " processos");
+  var t = limpar(document.getElementById("tab-processos"));
+  if (!lista.length) { t.appendChild(el("tbody", null, [el("tr", null, [el("td", { cls: "vazio", text: "Nenhum processo com esses filtros." })])])); return; }
+  t.appendChild(el("thead", null, [el("tr", null, [
+    el("th", { text: "Processo" }), el("th", { text: "Com quem" }), el("th", { text: "Situação" }), el("th", { text: "Vencimento" })
+  ])]));
+  var corpo = el("tbody");
+  lista.forEach(function (p) {
+    var s = SITUACOES[p.situacao] || SITUACOES.sem_analise, u = urgencia(p.vencimento);
+    var sit = el("td", null, [etiqueta(s.cls, s.sim, s.rot)]);
+    if (p.onde === "assessoria") sit.appendChild(el("span", { cls: "mini", text: " · 👥 assessoria" }));
+    if (p.emElaboracao) sit.appendChild(el("span", { cls: "mini", text: " · em elaboração" }));
+    corpo.appendChild(el("tr", null, [
+      el("td", null, [el("span", { cls: "proc", text: p.numero }), p.tipo === "ciencia" ? el("div", { cls: "mini", text: "ciência" }) : null]),
+      el("td", null, [p.comQuem ? el("span", { cls: "pessoa", text: p.comQuem }) : el("span", { cls: "ninguem", text: "ninguém" })]),
+      sit,
+      el("td", null, [
+        el("div", { text: dataBR(p.vencimento) + (p.vencimentoEstimado ? " (estimada)" : "") }),
+        etiqueta(u.cls, u.sim, u.rot)
+      ])
+    ]));
+  });
+  t.appendChild(corpo);
+}
+
+function desenharMovidos(d) {
+  document.getElementById("titulo-movidos").textContent =
+    "Saíram da caixa nos últimos " + d.janelaMovidosDias + " dias (" + d.movidos.length + ")";
+  var t = limpar(document.getElementById("tab-movidos"));
+  if (!d.movidos.length) { t.appendChild(el("tbody", null, [el("tr", null, [el("td", { cls: "vazio", text: "Nenhum processo saiu da caixa nesse período." })])])); return; }
+  t.appendChild(el("thead", null, [el("tr", null, [
+    el("th", { text: "Processo" }), el("th", { text: "Saiu da caixa em" }), el("th", { text: "Estava com" })
+  ])]));
+  var corpo = el("tbody");
+  d.movidos.forEach(function (m) {
+    corpo.appendChild(el("tr", null, [
+      el("td", null, [el("span", { cls: "proc", text: m.numero })]),
+      el("td", { text: dataBR(m.movidoEm) }),
+      el("td", null, [m.comQuem ? el("span", { cls: "pessoa", text: m.comQuem }) : el("span", { cls: "ninguem", text: "ninguém" })])
+    ]));
+  });
+  t.appendChild(corpo);
+  if (d.resumo.movidosTotal > d.movidos.length) {
+    t.appendChild(el("tfoot", null, [el("tr", null, [el("td", { colspan: "3", cls: "mini",
+      text: d.resumo.movidosTotal + " saíram da caixa desde o início do registro; aqui estão só os dos últimos " + d.janelaMovidosDias + " dias." })])]));
+  }
+}
+
+function desenhar(d) {
+  dados = d;
+  var g = String(d.geradoEm || "");
+  document.getElementById("situacao").textContent =
+    d.caixa + " · situação de " + dataBR(g) + " às " + g.slice(11, 16);
+  desenharCartoes(d.resumo, d.janelaMovidosDias);
+  desenharPessoas(d);
+  desenharFiltros(d);
+  desenharProcessos(d);
+  desenharMovidos(d);
+}
+
+function aviso(texto) {
+  var a = document.getElementById("aviso");
+  a.textContent = texto || "";
+  a.className = "aviso" + (texto ? " visivel" : "");
+}
+
+function carregar() {
+  fetch("dados.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (d) { aviso(""); desenhar(d); })
+    .catch(function () {
+      aviso(dados ? "Não consegui buscar a atualização agora — mostrando os últimos dados. Nova tentativa em 1 minuto."
+                  : "Não consegui carregar os dados. Nova tentativa em 1 minuto.");
+    });
+}
+
+document.getElementById("f-pessoa").addEventListener("change", function () { if (dados) desenharProcessos(dados); });
+document.getElementById("f-situacao").addEventListener("change", function () { if (dados) desenharProcessos(dados); });
+carregar();
+// A cada minuto: dados novos, e as etiquetas de vencimento recalculadas (vira o dia com a página aberta).
+setInterval(carregar, 60000);
+</script>
+</body>
+</html>

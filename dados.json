@@ -1,0 +1,852 @@
+{
+ "versao": 1,
+ "geradoEm": "2026-10-03 00:00:02",
+ "caixa": "PVH - NÚCLEO 4.0 - 2º JUIZADO",
+ "janelaMovidosDias": 30,
+ "resumo": {
+  "naCaixa": 39,
+  "analisadosNaCaixa": 29,
+  "semAnalise": 10,
+  "paraMinuta": 28,
+  "noSolar": 0,
+  "dependeDoAssistido": 1,
+  "especialista": 0,
+  "comAssessoria": 1,
+  "semResponsavel": 40,
+  "movidos": 80,
+  "movidosTotal": 372
+ },
+ "pessoas": [
+  {
+   "nome": "Débora",
+   "estagiario": false,
+   "foraDaEquipe": false,
+   "total": 0,
+   "semAnalise": 0,
+   "paraMinuta": 0,
+   "noSolar": 0
+  },
+  {
+   "nome": "Gabriel",
+   "estagiario": true,
+   "foraDaEquipe": false,
+   "total": 0,
+   "semAnalise": 0,
+   "paraMinuta": 0,
+   "noSolar": 0
+  },
+  {
+   "nome": "Adilson",
+   "estagiario": true,
+   "foraDaEquipe": false,
+   "total": 0,
+   "semAnalise": 0,
+   "paraMinuta": 0,
+   "noSolar": 0
+  }
+ ],
+ "processos": [
+  {
+   "numero": "7004708-48.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "depende_do_assistido",
+   "onde": "assessoria",
+   "tipo": "manifestacao",
+   "vencimento": "2026-08-26",
+   "vencimentoEstimado": true,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7005798-57.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-01",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7010132-08.2023.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-01",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7001979-49.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-05",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7002696-61.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-05",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7004039-24.2026.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-05",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7008616-79.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-05",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7008896-50.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-05",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7009886-75.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-05",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7010866-22.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-05",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7011357-29.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-06",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7004778-65.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-07",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7004998-63.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-07",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7006337-83.2026.8.22.0001",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-07",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7009539-76.2023.8.22.0000",
+   "comQuem": null,
+   "situacao": "depende_do_assistido",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-07",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7009767-51.2023.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-07",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7010918-18.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-07",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7007528-06.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-08",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7001908-13.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-09",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7002109-68.2026.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-09",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7004529-80.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-09",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7005477-56.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-09",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7006309-89.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-09",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7010196-18.2023.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-09",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7002917-73.2026.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-13",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7002677-55.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-14",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7003768-49.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-14",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7004676-72.2026.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-14",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7005998-64.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-14",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7002306-91.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-15",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7003128-80.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-15",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7006987-70.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-15",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7006716-95.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "ciencia",
+   "vencimento": "2026-10-16",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7008259-36.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-20",
+   "vencimentoEstimado": true,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7008259-36.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "sem_analise",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-20",
+   "vencimentoEstimado": true,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7001809-43.2025.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-22",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7008259-36.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-22",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7010219-27.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-10-28",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7010826-40.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-11-04",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  },
+  {
+   "numero": "7003307-14.2024.8.22.0000",
+   "comQuem": null,
+   "situacao": "para_minuta",
+   "onde": "caixa",
+   "tipo": "manifestacao",
+   "vencimento": "2026-11-13",
+   "vencimentoEstimado": false,
+   "emElaboracao": false
+  }
+ ],
+ "movidos": [
+  {
+   "numero": "7002376-74.2025.8.22.0000",
+   "movidoEm": "2026-10-01",
+   "comQuem": null
+  },
+  {
+   "numero": "7007478-14.2024.8.22.0000",
+   "movidoEm": "2026-09-29",
+   "comQuem": null
+  },
+  {
+   "numero": "7009636-42.2024.8.22.0000",
+   "movidoEm": "2026-09-29",
+   "comQuem": null
+  },
+  {
+   "numero": "7012059-09.2023.8.22.0000",
+   "movidoEm": "2026-09-29",
+   "comQuem": null
+  },
+  {
+   "numero": "7001729-45.2026.8.22.0000",
+   "movidoEm": "2026-09-27",
+   "comQuem": null
+  },
+  {
+   "numero": "7004536-09.2024.8.22.0000",
+   "movidoEm": "2026-09-27",
+   "comQuem": null
+  },
+  {
+   "numero": "7004536-09.2024.8.22.0000",
+   "movidoEm": "2026-09-27",
+   "comQuem": null
+  },
+  {
+   "numero": "7004996-93.2024.8.22.0000",
+   "movidoEm": "2026-09-27",
+   "comQuem": null
+  },
+  {
+   "numero": "7005649-61.2025.8.22.0000",
+   "movidoEm": "2026-09-27",
+   "comQuem": null
+  },
+  {
+   "numero": "7012658-45.2023.8.22.0000",
+   "movidoEm": "2026-09-27",
+   "comQuem": null
+  },
+  {
+   "numero": "7002089-77.2026.8.22.0000",
+   "movidoEm": "2026-09-23",
+   "comQuem": null
+  },
+  {
+   "numero": "7002526-21.2026.8.22.0000",
+   "movidoEm": "2026-09-23",
+   "comQuem": null
+  },
+  {
+   "numero": "7004416-29.2025.8.22.0000",
+   "movidoEm": "2026-09-23",
+   "comQuem": null
+  },
+  {
+   "numero": "7004676-72.2026.8.22.0000",
+   "movidoEm": "2026-09-23",
+   "comQuem": null
+  },
+  {
+   "numero": "7005788-13.2025.8.22.0000",
+   "movidoEm": "2026-09-23",
+   "comQuem": null
+  },
+  {
+   "numero": "7006276-31.2026.8.22.0000",
+   "movidoEm": "2026-09-23",
+   "comQuem": null
+  },
+  {
+   "numero": "7010216-09.2023.8.22.0000",
+   "movidoEm": "2026-09-23",
+   "comQuem": null
+  },
+  {
+   "numero": "7010726-85.2024.8.22.0000",
+   "movidoEm": "2026-09-23",
+   "comQuem": null
+  },
+  {
+   "numero": "7002259-49.2026.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7003128-80.2024.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7004139-13.2025.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7004139-13.2025.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7004529-80.2025.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7006716-95.2024.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7009149-72.2024.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7010347-81.2023.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7011579-31.2023.8.22.0000",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7066928-50.2022.8.22.0001",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7066928-50.2022.8.22.0001",
+   "movidoEm": "2026-09-21",
+   "comQuem": null
+  },
+  {
+   "numero": "7003359-73.2025.8.22.0000",
+   "movidoEm": "2026-09-17",
+   "comQuem": null
+  },
+  {
+   "numero": "7003359-73.2025.8.22.0000",
+   "movidoEm": "2026-09-17",
+   "comQuem": null
+  },
+  {
+   "numero": "7005266-20.2024.8.22.0000",
+   "movidoEm": "2026-09-17",
+   "comQuem": null
+  },
+  {
+   "numero": "7011766-65.2025.8.22.0001",
+   "movidoEm": "2026-09-17",
+   "comQuem": null
+  },
+  {
+   "numero": "7003989-66.2024.8.22.0000",
+   "movidoEm": "2026-09-16",
+   "comQuem": null
+  },
+  {
+   "numero": "7007948-11.2025.8.22.0000",
+   "movidoEm": "2026-09-16",
+   "comQuem": null
+  },
+  {
+   "numero": "7009539-76.2023.8.22.0000",
+   "movidoEm": "2026-09-16",
+   "comQuem": null
+  },
+  {
+   "numero": "7012486-06.2023.8.22.0000",
+   "movidoEm": "2026-09-16",
+   "comQuem": null
+  },
+  {
+   "numero": "7002678-40.2024.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7002678-40.2024.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7002758-67.2025.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7004247-08.2026.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7004247-08.2026.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7005208-17.2024.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7005826-88.2026.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7011091-76.2023.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7012486-06.2023.8.22.0000",
+   "movidoEm": "2026-09-15",
+   "comQuem": null
+  },
+  {
+   "numero": "7000577-93.2025.8.22.0000",
+   "movidoEm": "2026-09-14",
+   "comQuem": null
+  },
+  {
+   "numero": "7002696-61.2024.8.22.0000",
+   "movidoEm": "2026-09-14",
+   "comQuem": null
+  },
+  {
+   "numero": "7003307-14.2024.8.22.0000",
+   "movidoEm": "2026-09-14",
+   "comQuem": null
+  },
+  {
+   "numero": "7011357-29.2024.8.22.0000",
+   "movidoEm": "2026-09-14",
+   "comQuem": null
+  },
+  {
+   "numero": "7011579-31.2023.8.22.0000",
+   "movidoEm": "2026-09-14",
+   "comQuem": null
+  },
+  {
+   "numero": "7000808-86.2026.8.22.0000",
+   "movidoEm": "2026-09-11",
+   "comQuem": null
+  },
+  {
+   "numero": "7005826-88.2026.8.22.0000",
+   "movidoEm": "2026-09-11",
+   "comQuem": null
+  },
+  {
+   "numero": "7008577-82.2025.8.22.0000",
+   "movidoEm": "2026-09-11",
+   "comQuem": null
+  },
+  {
+   "numero": "7004858-92.2025.8.22.0000",
+   "movidoEm": "2026-09-10",
+   "comQuem": null
+  },
+  {
+   "numero": "7000559-38.2026.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7003212-47.2025.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7004289-57.2026.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7005998-64.2025.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7006606-62.2025.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7007226-74.2025.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7007226-74.2025.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7007528-06.2025.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7008466-35.2024.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7008466-35.2024.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7009641-64.2024.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7010116-54.2023.8.22.0000",
+   "movidoEm": "2026-09-09",
+   "comQuem": null
+  },
+  {
+   "numero": "7005119-57.2025.8.22.0000",
+   "movidoEm": "2026-09-05",
+   "comQuem": null
+  },
+  {
+   "numero": "7005868-11.2024.8.22.0000",
+   "movidoEm": "2026-09-05",
+   "comQuem": null
+  },
+  {
+   "numero": "7002109-68.2026.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7002689-69.2024.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7004858-92.2025.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7004858-92.2025.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7005266-20.2024.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7006276-31.2026.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7007948-11.2025.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7009539-76.2023.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7010719-93.2024.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7010818-97.2023.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  },
+  {
+   "numero": "7011939-29.2024.8.22.0000",
+   "movidoEm": "2026-09-04",
+   "comQuem": null
+  }
+ ]
+}
