@@ -1,0 +1,44 @@
+# Põe o painel no ar a cada atualização.
+#
+# Este arquivo é GERADO pelo dashboard do gabinete (painel-publico/publicar.yml
+# no repositório do dashboard) e substituído a cada publicação — editar aqui
+# não adianta.
+#
+# Publicar por workflow, e não pelo Pages clássico, é de propósito: o clássico
+# tem limite de 10 publicações por hora, e o painel publica sempre que algo muda.
+name: Publicar o painel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Uma publicação por vez; as que chegarem no meio esperam, e só a mais nova vale.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacao.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar os arquivos
+        uses: actions/checkout@v7
+      - name: Preparar o Pages
+        uses: actions/configure-pages@v6
+      - name: Empacotar o site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: '.'
+          retention-days: 1
+      - name: Publicar
+        id: publicacao
+        uses: actions/deploy-pages@v5
